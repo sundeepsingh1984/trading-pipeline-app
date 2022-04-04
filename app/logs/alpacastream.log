@@ -1,0 +1,90 @@
+
+2021-09-20 20:11:56,383 alpacastream - INFO:connction to alpaca server terminated
+2021-09-20 20:12:09,541 alpacastream - INFO:connecting to alpaca server
+2021-09-20 20:40:34,033 alpacastream - INFO:connction to alpaca server terminated
+2021-09-20 20:40:39,824 alpacastream - INFO:connecting to alpaca server
+2021-09-20 20:54:08,018 alpacastream - INFO:connction to alpaca server terminated
+2021-09-20 20:54:29,555 alpacastream - INFO:connecting to alpaca server
+2021-09-20 20:56:37,825 alpacastream - INFO:connction to alpaca server terminated
+2021-09-20 20:56:44,172 alpacastream - INFO:connecting to alpaca server
+2021-09-20 20:57:38,219 alpacastream - INFO:connction to alpaca server terminated
+2021-09-20 20:59:50,181 alpacastream - INFO:connecting to alpaca server
+2021-09-20 21:02:39,027 alpacastream - INFO:connction to alpaca server terminated
+2021-09-20 21:02:44,579 alpacastream - INFO:connecting to alpaca server
+2021-09-20 21:02:44,579 alpacastream - INFO:connecting to alpaca server
+2021-09-20 21:02:44,579 alpacastream - ERROR:some error connecting to server check logs
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\providers\Alpaca\AlpacaDataStream.py", line 90, in get_streams
+    res=self._conn.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\alpaca_trade_api\stream.py", line 554, in run
+    loop = asyncio.get_event_loop()
+  File "C:\ProgramData\Anaconda3\lib\asyncio\events.py", line 639, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'ThreadPoolExecutor-0_0'.
+2021-09-20 21:02:44,579 alpacastream - ERROR:some error connecting to server check logs
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\providers\Alpaca\AlpacaDataStream.py", line 90, in get_streams
+    res=self._conn.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\alpaca_trade_api\stream.py", line 554, in run
+    loop = asyncio.get_event_loop()
+  File "C:\ProgramData\Anaconda3\lib\asyncio\events.py", line 639, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'ThreadPoolExecutor-0_1'.
+2021-09-20 21:02:49,598 alpacastream - ERROR:error streaming trades for s&p
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\providers\Alpaca\AlpacaDataStream.py", line 104, in get_streams
+    raise e
+  File "D:\trading-final\Trading-final\trading\app\providers\Alpaca\AlpacaDataStream.py", line 90, in get_streams
+    res=self._conn.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\alpaca_trade_api\stream.py", line 554, in run
+    loop = asyncio.get_event_loop()
+  File "C:\ProgramData\Anaconda3\lib\asyncio\events.py", line 639, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'ThreadPoolExecutor-0_1'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\BackendController\Alpaca\StreamController.py", line 140, in stream_sp_trades
+    self.get_streams(self.feed,["trades","trades_update"],sp,self.handlers)
+  File "D:\trading-final\Trading-final\trading\app\providers\Alpaca\AlpacaDataStream.py", line 109, in get_streams
+    res=self._conn.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\alpaca_trade_api\stream.py", line 554, in run
+    loop = asyncio.get_event_loop()
+  File "C:\ProgramData\Anaconda3\lib\asyncio\events.py", line 639, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'ThreadPoolExecutor-0_1'.
+2021-09-20 21:02:49,598 alpacastream - INFO:connecting to alpaca server
+2021-09-20 21:02:49,598 alpacastream - ERROR:some error connecting to server check logs
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\providers\Alpaca\AlpacaDataStream.py", line 90, in get_streams
+    res=self._conn.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\alpaca_trade_api\stream.py", line 554, in run
+    loop = asyncio.get_event_loop()
+  File "C:\ProgramData\Anaconda3\lib\asyncio\events.py", line 639, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'ThreadPoolExecutor-0_0'.
+2021-09-20 21:02:54,599 alpacastream - ERROR:error streaming quotes for s&p
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\providers\Alpaca\AlpacaDataStream.py", line 104, in get_streams
+    raise e
+  File "D:\trading-final\Trading-final\trading\app\providers\Alpaca\AlpacaDataStream.py", line 90, in get_streams
+    res=self._conn.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\alpaca_trade_api\stream.py", line 554, in run
+    loop = asyncio.get_event_loop()
+  File "C:\ProgramData\Anaconda3\lib\asyncio\events.py", line 639, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'ThreadPoolExecutor-0_0'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\BackendController\Alpaca\StreamController.py", line 152, in stream_sp_quotes
+    self.get_streams(self.feed,["quotes"],sp,self.handlers)
+  File "D:\trading-final\Trading-final\trading\app\providers\Alpaca\AlpacaDataStream.py", line 109, in get_streams
+    res=self._conn.run()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\alpaca_trade_api\stream.py", line 554, in run
+    loop = asyncio.get_event_loop()
+  File "C:\ProgramData\Anaconda3\lib\asyncio\events.py", line 639, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'ThreadPoolExecutor-0_0'.

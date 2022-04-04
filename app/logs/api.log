@@ -1,0 +1,390 @@
+2021-09-27 18:57:45,612 api - ERROR:error fetching prices for assets:None timeframe:minute from source 2 ts:None to None
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 100, in getPrices
+    data=await dt_obj.get_prices(assets,timeframe,start,end,limit=limit)
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 154, in get_prices
+    raise e
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 88, in get_prices
+    data=await bar_obj.get_bar_min_by_ticker(assets,start=start,end=end,limit=limit)
+  File "D:\trading-final\Trading-final\trading\app\controllers\BackendController\Alpaca\BarsController.py", line 116, in get_bar_min_by_ticker
+    data=await self.query_data(BarMinute,"prices_min",parameter_val = ticker,limit=limit,start=start,end=end)
+  File "D:\trading-final\Trading-final\trading\app\controllers\BackendController\Alpaca\BarsController.py", line 85, in query_data
+    q_res=session.query(Stocks).filter( getattr(Stocks,parameter) ==  parameter_val).one()
+  File "c:\programdata\anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2808, in one
+    return self._iter().one()
+  File "c:\programdata\anaconda3\lib\site-packages\sqlalchemy\engine\result.py", line 1374, in one
+    return self._only_one_row(
+  File "c:\programdata\anaconda3\lib\site-packages\sqlalchemy\engine\result.py", line 561, in _only_one_row
+    raise exc.NoResultFound(
+sqlalchemy.exc.NoResultFound: No row was found when one was required
+2021-09-27 22:46:24,201 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-09-27 22:46:24,227 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-09 15:57:38,817 api - ERROR:error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\SourceController.py", line 44, in retreive
+    return [dict(s) for s in sorces]
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\SourceController.py", line 44, in <listcomp>
+    return [dict(s) for s in sorces]
+TypeError: 'Source' object is not iterable
+2021-10-09 15:57:40,318 api - ERROR:error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\SourceController.py", line 44, in retreive
+    return [dict(s) for s in sorces]
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\SourceController.py", line 44, in <listcomp>
+    return [dict(s) for s in sorces]
+TypeError: 'Source' object is not iterable
+2021-10-14 14:50:59,270 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 14:50:59,297 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:42:31,623 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:42:31,624 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:43:15,162 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:43:15,163 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:43:16,206 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:43:16,206 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:43:16,777 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:43:16,778 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:43:16,958 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:43:16,958 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:43:17,134 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:43:17,134 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:43:17,293 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:43:17,293 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:43:17,449 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:43:17,449 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:43:17,622 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:43:17,623 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:44:21,326 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:44:21,327 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:44:35,959 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:44:35,960 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:45:26,233 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:45:26,233 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:45:27,524 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:45:27,524 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:45:51,910 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:45:51,910 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError
+2021-10-14 15:45:52,998 api - ERROR:there was some error fetching source
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+2021-10-14 15:45:52,998 api - ERROR:some error occured
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 41, in get_source_details
+    self.source_nme=s_infm[0]["source_name"]
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\trading-final\Trading-final\trading\app\api\Routes\restapi.py", line 39, in tickers
+    data = await d_obj.get_stocks()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 59, in get_stocks
+    await self.get_source_details()
+  File "D:\trading-final\Trading-final\trading\app\controllers\ApiController\DataController.py", line 46, in get_source_details
+    raise ConnectionError
+ConnectionError

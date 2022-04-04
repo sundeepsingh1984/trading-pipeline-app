@@ -1,0 +1,29 @@
+2021-09-20 20:40:39,552 cron - INFO:Data Straming Started
+2021-09-20 20:54:26,404 cron - INFO:FILE SYSTEM UPDATE COMPLETED
+2021-09-20 21:21:22,983 cron - INFO:Cron updating on bars for timeframe 1Min  started
+2021-09-20 21:35:48,552 cron - INFO:Cron updating on bars for timeframe 1Min  started
+2021-09-20 21:38:14,968 cron - INFO:Cron updating on bars for timeframe 1Min  started
+2021-09-27 17:22:36,335 cron - INFO:Cron updating on bars for timeframe 1Min  started
+2021-09-27 17:24:06,033 cron - INFO:Cron updating on bars for timeframe 1Min  started
+2021-09-27 17:26:40,645 cron - INFO:Cron updating on bars for timeframe 1Min  started
+2021-09-27 18:02:05,044 cron - ERROR:Cron updating on bars failed for timeframe 1Min 
+Traceback (most recent call last):
+  File "alpacaupdatecron.py", line 56, in update_models
+    self.populate_price_quote_trade(request_for=update_on,timeframe=timeframe,start=start,chunk_size=chunk_sz)
+  File "D:\trading-final\Trading-final\trading\app\controllers\BackendController\Alpaca\DataPopulateController.py", line 257, in populate_price_quote_trade
+    if save_to == "queue" and len(data)>0:
+TypeError: object of type 'NoneType' has no len()
+2021-09-27 18:02:05,184 cron - INFO:Cron updating on bars for timeframe 1Hour  started
+2021-09-27 18:02:29,553 cron - ERROR:Cron updating on bars failed for timeframe 1Hour 
+Traceback (most recent call last):
+  File "alpacaupdatecron.py", line 56, in update_models
+    self.populate_price_quote_trade(request_for=update_on,timeframe=timeframe,start=start,chunk_size=chunk_sz)
+  File "D:\trading-final\Trading-final\trading\app\controllers\BackendController\Alpaca\DataPopulateController.py", line 257, in populate_price_quote_trade
+    if save_to == "queue" and len(data)>0:
+TypeError: object of type 'NoneType' has no len()
+2021-09-27 18:02:29,600 cron - INFO:Cron updating on bars for timeframe 1Day  started
+2021-09-27 18:17:47,684 cron - INFO:Cron updating on bars for timeframe 1Min  started
+2021-09-27 18:18:26,138 cron - INFO:Cron updating on bars for timeframe 1Day  started
+2021-09-27 18:20:29,507 cron - INFO:Cron updating on bars for timeframe 1Day  started
+2021-09-27 18:22:52,508 cron - INFO:Cron updating on bars for timeframe 1Day finished
+2021-09-27 18:23:01,828 cron - INFO:data already updated for bars for timeframe 1Day 
